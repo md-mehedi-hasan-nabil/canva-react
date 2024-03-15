@@ -1,8 +1,6 @@
-import{ useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
-export default function CanvasContainer() {
-    const canvasRef = useRef<HTMLCanvasElement>(null);
-
+export default function CanvasContainer({ canvasRef }: { canvasRef: React.RefObject<HTMLCanvasElement> }) {
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas) return;
@@ -12,7 +10,7 @@ export default function CanvasContainer() {
 
         context.fillStyle = 'red';
         context.fillRect(0, 0, 100, 100);
-    }, []);
+    }, [canvasRef]);
 
     return <canvas ref={canvasRef}></canvas>;
 }
