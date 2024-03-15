@@ -11,7 +11,7 @@ export default function App() {
         <aside className="w-40 h-full bg-slate-200 p-2">
           <Sidebar canvasRef={canvasRef} />
         </aside>
-        <main id="main-content" className="w-full">
+        <main id="main-content" className="w-[1280px] mx-auto">
           <CanvasContainer canvasRef={canvasRef} />
         </main>
       </div>

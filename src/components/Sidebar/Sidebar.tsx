@@ -46,7 +46,7 @@ export default function Sidebar({ canvasRef }: { canvasRef: React.RefObject<HTML
 
     return (
         <div className="flex flex-col justify-center items-center gap-4 pt-6">
-            <Rectangle canvasContext={canvasContext} />
+            <Rectangle canvasContext={canvasContext} canvasRef={canvasRef} />
             <div className="w-20 transition cursor-pointer active:scale-95" onClick={createTriangle}>
                 <img className="w-full" draggable={false} src={triangleIcon} alt="triangle" />
             </div>

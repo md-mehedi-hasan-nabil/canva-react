@@ -20,11 +20,11 @@ export default function CanvasContainer({ canvasRef }: { canvasRef: React.RefObj
             }
 
             const { width, height } = mainContent.getBoundingClientRect();
-            setCanvasSize({ width: width, height: height });
+            setCanvasSize({ width: Math.floor(width), height: Math.floor(height) });
         };
 
         handleResize();
-        
+
         window.addEventListener("resize", handleResize);
 
         return () => {
