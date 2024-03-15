@@ -58,9 +58,9 @@ export default function ResizeSidebar({ children, sidebar }: { children: ReactNo
             </aside>
             <div
                 ref={resizeBarRef}
-                className="w-[3px] transition select-none hover:cursor-ew-resize hover:bg-slate-500"
+                className="w-1 transition select-none hover:cursor-ew-resize hover:bg-slate-500"
             ></div>
-            <main className="p-2">
+            <main id="main-content" className="p-2 w-full">
                 {children}
             </main>
         </div>
