@@ -20,7 +20,6 @@ export default function ResizeSidebar({ children, sidebar }: { children: ReactNo
         const resize = (e: MouseEvent) => {
             if (sidebarRef.current && isResizing) {
                 const width = sidebarWidth + e.clientX - startX;
-                console.log(width)
                 if (100 <= width) {
                     sidebarRef.current.style.width = `${width}px`;
                 }
@@ -59,7 +58,7 @@ export default function ResizeSidebar({ children, sidebar }: { children: ReactNo
             </aside>
             <div
                 ref={resizeBarRef}
-                className="w-1 transition select-none hover:cursor-ew-resize hover:bg-slate-500"
+                className="w-[3px] transition select-none hover:cursor-ew-resize hover:bg-slate-500"
             ></div>
             <main className="p-2">
                 {children}
